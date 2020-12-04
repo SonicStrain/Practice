@@ -10,7 +10,7 @@ int kthSmallest(int arr[], int l, int r, int k) {
     sort(arr,arr+r+1);
     int counter = 0,value = arr[0];
     for(int i=0;i<r+1;i++){
-        if(counter<k){
+        if(counter<k && value != arr[i]){
             value = arr[i];
             counter++;
         }
